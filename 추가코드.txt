@@ -1,0 +1,1 @@
+sales[sales["product"] == "범핑"].to_excel("data.xlsx")
