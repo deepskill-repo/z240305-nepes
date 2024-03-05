@@ -12,3 +12,17 @@ my_function(1)
 
 # 엑셀 파일로 저장하기
 df.to_excel("주가엑셀파일.xlsx")
+
+
+## EDA
+# [TASK] 2.2 평균 layer_thickness_nm이 가장 낮은 material_type은?
+
+# Assuming the data is already loaded into a variable called "data"
+# Calculate the average layer_thickness_nm by material_type
+average_thickness_by_material = data.groupby("material_type")["layer_thickness_nm"].mean()
+
+# Find the material_type with the lowest average layer_thickness_nm
+lowest_thickness_material = average_thickness_by_material.idxmin()
+
+# Print the result
+print(f"평균 layer_thickness_nm이 가장 낮은 material_type은: {lowest_thickness_material}")
