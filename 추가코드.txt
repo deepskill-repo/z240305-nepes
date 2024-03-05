@@ -28,3 +28,13 @@ lowest_thickness_material = average_thickness_by_material.idxmin()
 
 # Print the result
 print(f"평균 layer_thickness_nm이 가장 낮은 material_type은: {lowest_thickness_material}")
+
+
+# [TASK] 2.2 평균 layer_thickness_nm이 가장 낮은 material_type은?
+data.groupby("material_type")["layer_thickness_nm"].mean().idxmin()
+
+# [TASK] 2.3 평균 deposition_rate가 가장 높은 etching_voltage는?
+data.groupby("etching_voltage")["deposition_rate"].mean().idxmax()
+
+# [TASK] 2.4 humidity_level에 따른 product_defect 비율이 가장 높은 범주는?
+data.groupby("humidity_level")["product_defect"].mean().idxmax()
