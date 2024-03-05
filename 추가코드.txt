@@ -17,6 +17,8 @@ df.to_excel("주가엑셀파일.xlsx")
 ## EDA
 # [TASK] 2.2 평균 layer_thickness_nm이 가장 낮은 material_type은?
 
+# 프롬프트: "data 라는 변수에서 평균 layer_thickness_nm이 가장 낮은 material_type을 확인하려면?"
+
 # Assuming the data is already loaded into a variable called "data"
 # Calculate the average layer_thickness_nm by material_type
 average_thickness_by_material = data.groupby("material_type")["layer_thickness_nm"].mean()
